@@ -25,6 +25,7 @@ void CreationDisque()
 	}
 int main(int argc, const char *argv[])
 {
+	CreationDisque();
 
     return 0;
 }
