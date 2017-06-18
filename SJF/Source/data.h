@@ -4,14 +4,12 @@
 
 #define  MAX_BLOC_USED 30
 
-
 typedef struct inode
 {
-	char* name;
-	char permission[8];
-	int typeFile;
+	char* name; //Nom du fichier
+	char permission[8]; // Droit
+	int typeFile; //Type du fichier
 	int useBloc[MAX_BLOC_USED]
-	int nbBlocUsed;
 
 }Inode;
 
@@ -20,9 +18,9 @@ typedef struct inode
 
 typedef struct bloc
 {
-  int id;
-	char data[BLOC_SIZE];
-	int sizeData;
+  int id; //Id bloc
+	char data[BLOC_SIZE]; //Données
+	int sizeData; //Taille utilisé
 
 	int next_bloc;
 	int previous_bloc;
