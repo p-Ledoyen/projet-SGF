@@ -18,7 +18,7 @@ typedef struct inode
 
 typedef struct bloc
 {
-  int id; //Id bloc
+	int id; //Id bloc
 	char data[BLOC_SIZE]; //Données
 	int sizeData; //Taille utilisé
 
@@ -26,3 +26,14 @@ typedef struct bloc
 	int previous_bloc;
 
 }Bloc ;
+
+
+#define MAX_INODE 15
+#define MAX_BLOC (MAX_INODE*MAX_BLOC_USED)
+
+typedef struct disk
+{
+  Bloc bloc[];
+  Inode inode[];
+
+}Disk;
